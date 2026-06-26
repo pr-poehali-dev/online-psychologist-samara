@@ -12,7 +12,7 @@ import {
 
 const navLinks = [
   { label: 'Запросы', href: '#zaprosy' },
-  { label: 'Специалисты', href: '#specialisty' },
+  { label: 'Как проходит', href: '#process' },
   { label: 'Стоимость', href: '#stoimost' },
   { label: 'FAQ', href: '#faq' },
 ];
@@ -26,64 +26,54 @@ const facts = [
   { icon: 'Home', text: 'Без дороги до кабинета' },
 ];
 
-const requests = [
-  { icon: 'Wind', title: 'Тревога', text: 'Когда внутри постоянное напряжение, сложно расслабиться и мысли крутятся по кругу.' },
-  { icon: 'BatteryLow', title: 'Выгорание', text: 'Когда нет сил, работа раздражает, а отдых не восстанавливает.' },
-  { icon: 'Heart', title: 'Сложности в отношениях', text: 'Когда в близком общении много конфликтов, непонимания и хочется разобраться в себе.' },
-  { icon: 'Sparkles', title: 'Самооценка', text: 'Когда хочется мягче относиться к себе и опираться на собственное мнение.' },
-  { icon: 'HelpCircle', title: 'Неуверенность', text: 'Когда сложно доверять своим желаниям и решениям, всё время сомневаетесь в себе.' },
-  { icon: 'CloudRain', title: 'Расставание', text: 'Когда переживаете разрыв и ищете опору и новое спокойствие внутри.' },
-  { icon: 'Moon', title: 'Одиночество', text: 'Когда кажется, что вы наедине с собой, и хочется поддержки и понимания.' },
-  { icon: 'Compass', title: 'Трудности с решениями', text: 'Когда много мыслей сразу и сложно выбрать направление.' },
-  { icon: 'Cloudy', title: 'Эмоциональная перегрузка', text: 'Когда слишком много чувств и задач, хочется выдохнуть и всё разложить по полкам.' },
+const starts = [
+  { title: 'Разобраться с тревогой', text: 'Когда внутри постоянное напряжение и мысли крутятся по кругу.' },
+  { title: 'Восстановиться после выгорания', text: 'Когда нет сил, работа раздражает, а отдых не восстанавливает.' },
+  { title: 'Обсудить отношения', text: 'Когда в близком общении много конфликтов и хочется разобраться в себе.' },
+  { title: 'Пережить расставание', text: 'Когда переживаете разрыв и ищете опору и новое спокойствие внутри.' },
+  { title: 'Вернуть внутреннюю опору', text: 'Когда привычная почва ушла из-под ног и хочется устойчивости.' },
+  { title: 'Понять, что со мной происходит', text: 'Когда трудно сформулировать, что именно беспокоит, но что-то не так.' },
 ];
 
-const specialists = [
-  {
-    name: 'Специалист 1',
-    exp: '8 лет практики',
-    approach: 'КПТ, интегративный подход',
-    works: 'Тревога, выгорание, самооценка',
-    phrase: 'Помогаю спокойно разложить тревогу по полочкам и вернуть силы.',
-    time: 'Ближайшее: завтра, 18:00',
-    tags: ['Тревога', 'Выгорание', 'Самооценка'],
-  },
-  {
-    name: 'Специалист 2',
-    exp: '6 лет практики',
-    approach: 'Гештальт-подход',
-    works: 'Отношения, расставание, одиночество',
-    phrase: 'Бережно поддерживаю в отношениях и переживании расставаний.',
-    time: 'Ближайшее: сегодня, 20:00',
-    tags: ['Отношения', 'Расставание'],
-  },
-  {
-    name: 'Специалист 3',
-    exp: '11 лет практики',
-    approach: 'Схема-терапия',
-    works: 'Личный кризис, перегрузка, неуверенность',
-    phrase: 'Помогаю найти опору, когда привычная почва ушла из-под ног.',
-    time: 'Ближайшее: послезавтра, 12:00',
-    tags: ['Самооценка', 'Выгорание', 'Не знаю запрос'],
-  },
+const consultationIncludes = [
+  'Спокойно разберём, что вас беспокоит',
+  'Поможем сформулировать запрос',
+  'Обсудим тревогу, выгорание, отношения, самооценку или сложный период',
+  'Поймём, какой формат работы может подойти дальше',
+  'Без давления и обещаний быстрого результата',
 ];
 
-const filters = ['Все', 'Тревога', 'Отношения', 'Выгорание', 'Самооценка', 'Расставание', 'Не знаю запрос'];
+const samaraReasons = [
+  { icon: 'Car', text: 'Не нужно ехать в кабинет' },
+  { icon: 'MapPinned', text: 'Не нужно искать приём рядом с домом' },
+  { icon: 'Sofa', text: 'Можно говорить из спокойного места' },
+  { icon: 'CalendarClock', text: 'Время подбирается с учётом Самары' },
+  { icon: 'Globe', text: 'Район города не важен — консультация проходит онлайн' },
+];
+
+const processSteps = [
+  'Вы оставляете заявку',
+  'Мы связываемся с вами',
+  'Уточняем удобное время',
+  'Консультация проходит онлайн',
+  'На встрече спокойно разбираем запрос',
+  'После встречи становится понятнее, как двигаться дальше',
+];
 
 const afterRequest = [
-  { icon: 'Inbox', title: 'Мы получим ваш контакт', text: 'Заявка приходит к нам, и мы связываемся удобным для вас способом.' },
-  { icon: 'CalendarClock', title: 'Уточним удобное время', text: 'Выбираем время с учётом самарского часового пояса.' },
-  { icon: 'Users', title: 'Поможем выбрать специалиста', text: 'Подбираем психолога под ваш запрос и подход.' },
+  { icon: 'Inbox', title: 'Мы получим ваш контакт', text: 'Заявка приходит к нам, и мы связываемся удобным способом.' },
+  { icon: 'CalendarClock', title: 'Уточним удобное время', text: 'Подбираем время с учётом самарского часового пояса.' },
+  { icon: 'MessageCircle', title: 'Ответим на вопросы', text: 'Спокойно проясним все организационные моменты.' },
   { icon: 'CheckCircle2', title: 'Подтвердим запись', text: 'Согласуем детали и подтверждаем встречу.' },
-  { icon: 'Video', title: 'Консультация пройдёт онлайн', text: 'Встреча проходит по видеосвязи из вашего спокойного места.' },
+  { icon: 'Video', title: 'Консультация пройдёт онлайн', text: 'Встреча по видеосвязи из вашего спокойного места.' },
 ];
 
 const trust = [
-  { icon: 'UserCheck', text: 'Психологи работают со взрослыми' },
-  { icon: 'BadgeCheck', text: 'Указаны опыт, подход и специализация' },
-  { icon: 'Wallet', text: 'Цена известна заранее — 2000 ₽ за 60 минут' },
-  { icon: 'Lock', text: 'Консультации конфиденциальны' },
+  { icon: 'Lock', text: 'Консультация конфиденциальна' },
+  { icon: 'Wallet', text: 'Цена известна заранее' },
+  { icon: 'Eye', text: 'Формат понятен до записи' },
   { icon: 'Hand', text: 'Нет обещаний быстрого результата' },
+  { icon: 'HeartHandshake', text: 'Можно прийти без чёткого запроса' },
   { icon: 'Stethoscope', text: 'При необходимости подскажем, когда лучше обратиться к врачу или психиатру' },
 ];
 
@@ -94,6 +84,7 @@ const summary = [
   'Стоимость 2000 рублей',
   'Формат подходит взрослым',
   'Можно прийти без чёткого запроса',
+  'Заявка не обязывает к оплате',
   'При остром состоянии нужно обращаться в экстренные службы или к врачу',
 ];
 
@@ -101,7 +92,7 @@ const faq = [
   { q: 'Можно ли обратиться к психологу онлайн из Самары?', a: 'Да. Консультации проходят по видеосвязи, поэтому географически вы можете находиться где угодно, в том числе в Самаре. Время встречи подбираем с учётом самарского часового пояса.' },
   { q: 'Есть ли очный приём в Самаре?', a: 'Нет, очного приёма в Самаре нет. Консультации проходят только онлайн.' },
   { q: 'Сколько стоит консультация?', a: 'Онлайн консультация длится 60 минут и стоит 2000 рублей. В стоимость входит первая встреча, спокойный разбор запроса и бережная обратная связь.' },
-  { q: 'Как выбрать специалиста?', a: 'Можно выбрать психолога по запросу, подходу и ощущению доверия. Район Самары не важен, потому что консультации проходят онлайн. Если сложно выбрать самостоятельно — оставьте заявку, и мы поможем подобрать специалиста под ваш запрос.' },
+  { q: 'Как проходит первая консультация?', a: 'Встреча проходит по видеосвязи и длится 60 минут. На ней спокойно разбираем, что вас беспокоит, помогаем сформулировать запрос и понять, какой формат работы может подойти дальше. Без давления и обещаний быстрого результата.' },
   { q: 'Можно ли прийти без чёткого запроса?', a: 'Да. Иногда сложно сформулировать, что именно беспокоит. Психолог поможет прояснить запрос вместе с вами на первой встрече.' },
   { q: 'Конфиденциальна ли консультация?', a: 'Да. Всё, что обсуждается на встрече, остаётся между вами и психологом. Данные заявки не передаются третьим лицам.' },
   { q: 'Когда нужен психиатр?', a: 'Если есть острое состояние, нужна медицинская диагностика или назначение лекарств — это зона работы врача-психиатра. Психолог не назначает лекарства и не заменяет медицинскую помощь.' },
@@ -110,26 +101,20 @@ const faq = [
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeFilter, setActiveFilter] = useState('Все');
 
   const scrollTo = (id: string) => {
     setMenuOpen(false);
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const visibleSpecialists =
-    activeFilter === 'Все'
-      ? specialists
-      : specialists.filter((s) => s.tags.includes(activeFilter) || activeFilter === 'Не знаю запрос');
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Шапка */}
-      <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
+      <header className="sticky top-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-[72px]">
           <a href="#" className="flex flex-col leading-tight">
-            <span className="font-display text-2xl font-semibold">Психолог онлайн</span>
-            <span className="text-xs text-muted-foreground">Консультации для взрослых</span>
+            <span className="font-display text-2xl font-semibold">Психологическая помощь онлайн</span>
+            <span className="text-xs text-muted-foreground">Для взрослых из Самары</span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -144,8 +129,9 @@ const Index = () => {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Button onClick={() => scrollTo('#zayavka')} className="rounded-full px-6 hidden sm:inline-flex">
+          <div className="flex items-center gap-4">
+            <span className="hidden md:inline text-sm font-medium text-primary">2000 ₽ / 60 минут</span>
+            <Button onClick={() => scrollTo('#zayavka')} className="rounded-full px-6">
               Записаться
             </Button>
             <button
@@ -159,7 +145,7 @@ const Index = () => {
         </div>
 
         {menuOpen && (
-          <div className="lg:hidden border-t border-border bg-background animate-fade-in-up">
+          <div className="lg:hidden border-t border-border bg-card animate-fade-in-up">
             <nav className="container py-4 flex flex-col gap-1">
               {navLinks.map((l) => (
                 <button
@@ -170,9 +156,6 @@ const Index = () => {
                   {l.label}
                 </button>
               ))}
-              <Button onClick={() => scrollTo('#zayavka')} className="rounded-full mt-2 sm:hidden">
-                Записаться
-              </Button>
             </nav>
           </div>
         )}
@@ -183,64 +166,54 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="animate-fade-in-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm text-accent-foreground mb-6">
-              <Icon name="Video" size={15} /> Подбор специалиста · только онлайн
+              <Icon name="Video" size={15} /> Конфиденциально · только онлайн
             </span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-[4.2rem] font-semibold leading-[1.05] mb-6">
-              Подбор онлайн психолога для взрослых из&nbsp;Самары
+            <h1 className="font-display text-5xl md:text-6xl lg:text-[4.1rem] font-semibold leading-[1.05] mb-6">
+              Психологическая помощь онлайн для взрослых из&nbsp;Самары
             </h1>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-5 max-w-xl">
-              Поможем выбрать специалиста для онлайн консультации при тревоге, выгорании, сложностях
-              в отношениях, самооценке или личном кризисе. Встречи проходят по видеосвязи, время
-              подбирается с учётом Самары. Очного приёма в Самаре нет.
+            <p className="text-lg text-foreground/75 leading-relaxed mb-5 max-w-xl">
+              Конфиденциальная онлайн консультация при тревоге, выгорании, сложностях в отношениях,
+              самооценке или личном кризисе. Встреча проходит по видеосвязи, длится 60 минут и стоит
+              2000 рублей. Очного приёма в Самаре нет.
             </p>
-            <div className="flex items-start gap-3 rounded-2xl bg-secondary/70 border border-border p-4 mb-8 max-w-xl">
-              <Icon name="Info" size={20} className="text-primary shrink-0 mt-0.5" />
-              <p className="text-[15px] text-foreground">
-                Консультации проходят только онлайн. Очного приёма в Самаре нет.
-              </p>
-            </div>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" onClick={() => scrollTo('#zayavka')} className="text-base px-7 py-6 rounded-full">
-                Подобрать психолога
+                Записаться на консультацию
                 <Icon name="ArrowRight" size={18} className="ml-1" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => scrollTo('#specialisty')}
+                onClick={() => scrollTo('#zaprosy')}
                 className="text-base px-7 py-6 rounded-full"
               >
-                Посмотреть специалистов
+                С чем можно обратиться
               </Button>
             </div>
             <p className="text-sm text-foreground/60 mt-4">
-              Ответим в течение рабочего дня. Консультация 60 минут, 2000 рублей. Заявка не обязывает
-              к оплате.
+              Ответим в течение рабочего дня. Заявка не обязывает к оплате.
             </p>
           </div>
 
-          {/* Визуал: онлайн-встреча + карточки специалистов */}
+          {/* Тёплый визуал онлайн-консультации */}
           <div className="relative animate-fade-in-up" style={{ animationDelay: '0.15s' }}>
             <div className="absolute -inset-4 bg-accent/40 rounded-[2.5rem] -rotate-3" />
-            <div className="relative rounded-[2rem] bg-card border border-border shadow-xl p-5 space-y-4">
-              <div className="rounded-2xl bg-gradient-to-br from-accent/60 to-secondary aspect-video flex flex-col items-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-card/80 flex items-center justify-center mb-3">
-                  <Icon name="Video" size={26} className="text-primary" />
+            <div className="relative rounded-[2rem] bg-card border border-border shadow-xl p-6">
+              <div className="rounded-2xl bg-gradient-to-br from-secondary to-accent/50 aspect-[4/3] flex flex-col items-center justify-center p-8 text-center">
+                <div className="w-16 h-16 rounded-full bg-card/80 flex items-center justify-center mb-4 shadow-sm">
+                  <Icon name="Video" size={28} className="text-primary" />
                 </div>
-                <span className="text-sm text-foreground/70">Онлайн консультация по видеосвязи</span>
+                <p className="font-display text-2xl font-semibold text-foreground mb-1">Спокойный разговор</p>
+                <p className="text-sm text-foreground/70">по видеосвязи из безопасного места</p>
               </div>
-              {specialists.slice(0, 2).map((s) => (
-                <div key={s.name} className="flex items-center gap-4 rounded-2xl bg-background border border-border p-3">
-                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-                    <Icon name="User" size={22} className="text-muted-foreground" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-medium text-[15px]">{s.name}</p>
-                    <p className="text-[13px] text-foreground/60 truncate">{s.works}</p>
-                  </div>
-                  <span className="ml-auto text-sm font-semibold text-primary whitespace-nowrap">2000 ₽</span>
+              <div className="flex items-center justify-between mt-5 px-1">
+                <div className="flex items-center gap-2 text-sm text-foreground/70">
+                  <Icon name="Lock" size={16} className="text-primary" /> Конфиденциально
                 </div>
-              ))}
+                <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+                  <Icon name="Clock" size={16} /> 60 минут · 2000 ₽
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -255,182 +228,125 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Почему онлайн удобно жителям Самары */}
-      <section className="bg-secondary/50 py-20 md:py-28">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">Почему онлайн удобно жителям Самары</h2>
-            <p className="text-foreground/70 text-lg leading-relaxed">
-              Онлайн формат помогает выбрать специалиста не по району, а по опыту, подходу и ощущению
-              доверия. Не нужно ехать в кабинет, тратить время на дорогу и искать приём рядом. Можно
-              выбрать спокойное место для разговора и подобрать время с учётом самарского часового пояса.
-            </p>
-          </div>
-          <div className="space-y-4">
-            {[
-              { icon: 'MapPinned', text: 'Выбор специалиста по подходу, а не по району' },
-              { icon: 'Clock4', text: 'Без дороги и пробок — экономия времени' },
-              { icon: 'Sofa', text: 'Разговор из своего спокойного места' },
-              { icon: 'CalendarClock', text: 'Удобное время с учётом самарского часового пояса' },
-            ].map((i) => (
-              <div key={i.text} className="flex items-center gap-4 rounded-2xl bg-card border border-border p-5">
-                <Icon name={i.icon} size={24} className="text-primary shrink-0" />
-                <span className="font-medium text-[15px]">{i.text}</span>
+      {/* 6. Услуга — первая консультация */}
+      <section id="stoimost" className="bg-secondary/50 py-20 md:py-28">
+        <div className="container max-w-4xl">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-10 text-center">Первая онлайн консультация психолога</h2>
+          <div className="rounded-[2.5rem] bg-card border border-border shadow-sm overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-border">
+                <div className="font-display text-6xl font-semibold text-primary mb-1">2000 ₽</div>
+                <p className="text-foreground/70 mb-6">за 60 минут по видеосвязи</p>
+                <ul className="space-y-3">
+                  {['60 минут', 'По видеосвязи', 'Для взрослых', 'Можно прийти без чёткого запроса', 'Очного приёма в Самаре нет'].map((t) => (
+                    <li key={t} className="flex items-start gap-3 text-base">
+                      <Icon name="Check" size={20} className="text-primary mt-0.5 shrink-0" />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Текстовый блок копирайтера */}
-      <section className="container py-20 md:py-28">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-8">Онлайн консультация психолога для жителей Самары</h2>
-          <div className="space-y-5 text-lg text-foreground/75 leading-relaxed">
-            <p>
-              Онлайн консультация подходит взрослым из Самары, которым нужна спокойная помощь без
-              поездки в кабинет. На встрече можно обсудить тревогу, выгорание, отношения, самооценку,
-              расставание, эмоциональную усталость или состояние, когда трудно понять, что происходит.
-            </p>
-            <p>
-              Не обязательно заранее идеально формулировать запрос — психолог поможет разобраться
-              вместе с вами. Онлайн формат помогает выбрать специалиста по опыту, подходу и доверию,
-              а не по району города.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Запросы */}
-      <section id="zaprosy" className="bg-secondary/50 py-20 md:py-28">
-        <div className="container">
-          <div className="max-w-2xl mb-12">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">С какими запросами приходят</h2>
-            <p className="text-foreground/70 text-lg">
-              Если узнаёте себя в чём-то из этого — это уже достаточный повод поговорить.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {requests.map((r) => (
-              <div key={r.title} className="rounded-3xl bg-card border border-border p-7 transition-shadow hover:shadow-md">
-                <h3 className="font-display text-2xl font-semibold mb-2">{r.title}</h3>
-                <p className="text-foreground/70 text-base leading-relaxed">{r.text}</p>
+              <div className="p-8 md:p-10 bg-muted/40">
+                <h3 className="font-display text-2xl font-semibold mb-5">Что будет на консультации</h3>
+                <ul className="space-y-3">
+                  {consultationIncludes.map((t) => (
+                    <li key={t} className="flex items-start gap-3 text-base text-foreground/80">
+                      <Icon name="Dot" size={20} className="text-primary mt-0.5 shrink-0" />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
+            </div>
+            <div className="p-8 md:p-10 border-t border-border text-center">
+              <Button size="lg" onClick={() => scrollTo('#zayavka')} className="rounded-full text-base px-8 py-6">
+                Записаться на первую консультацию
+              </Button>
+              <p className="text-sm text-foreground/60 mt-4">Заявка не обязывает к оплате.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Как выбрать психолога */}
-      <section className="container py-20 md:py-28">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">Как выбрать психолога в Самаре</h2>
-          <p className="text-foreground/70 text-lg leading-relaxed mb-10">
-            Для онлайн консультации район города не главное. Гораздо важнее обращать внимание
-            на то, что действительно влияет на качество работы и ваше ощущение безопасности.
+      {/* 7. С чего можно начать */}
+      <section id="zaprosy" className="container py-20 md:py-28">
+        <div className="max-w-2xl mb-12">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">С чего можно начать</h2>
+          <p className="text-foreground/70 text-lg">
+            Необязательно заранее идеально формулировать запрос. Можно просто прийти и спокойно поговорить.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            'Образование специалиста',
-            'Опыт практики',
-            'Подход, который вам близок',
-            'Работа именно со взрослыми',
-            'Понятная стоимость',
-            'Конфиденциальность',
-            'Без обещаний быстрого результата',
-            'Ощущение доверия в контакте',
-          ].map((t) => (
-            <div key={t} className="flex items-start gap-3 rounded-2xl bg-card border border-border p-5">
-              <Icon name="Check" size={20} className="text-primary mt-0.5 shrink-0" />
-              <span className="text-base">{t}</span>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {starts.map((s) => (
+            <div key={s.title} className="rounded-3xl bg-card border border-border p-7 flex flex-col">
+              <h3 className="font-display text-2xl font-semibold mb-2">{s.title}</h3>
+              <p className="text-foreground/70 text-base leading-relaxed mb-6">{s.text}</p>
+              <Button
+                variant="outline"
+                onClick={() => scrollTo('#zayavka')}
+                className="mt-auto rounded-full w-full"
+              >
+                Обсудить на консультации
+              </Button>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Специалисты */}
-      <section id="specialisty" className="bg-secondary/50 py-20 md:py-28">
-        <div className="container">
-          <div className="max-w-2xl mb-8">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">Специалисты, которые консультируют онлайн</h2>
-            <p className="text-foreground/70 text-lg">
-              Вы можете выбрать психолога по запросу, подходу и ощущению доверия. Район Самары не важен,
-              потому что консультации проходят онлайн.
+      {/* 8. Основной текстовый блок */}
+      <section className="bg-secondary/50 py-20 md:py-28">
+        <div className="container max-w-3xl">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-8">Онлайн консультация психолога для жителей Самары</h2>
+          <div className="space-y-5 text-lg text-foreground/75 leading-relaxed">
+            <p>
+              Онлайн консультация психолога подходит взрослым из Самары, которым нужна спокойная и
+              конфиденциальная помощь без поездки в кабинет. Встреча проходит по видеосвязи, длится
+              60 минут и стоит 2000 рублей.
             </p>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mb-10">
-            {filters.map((f) => (
-              <button
-                key={f}
-                onClick={() => setActiveFilter(f)}
-                className={`rounded-full px-4 py-2 text-sm border transition-colors ${
-                  activeFilter === f
-                    ? 'bg-primary text-primary-foreground border-primary'
-                    : 'bg-card text-foreground/70 border-border hover:text-foreground'
-                }`}
-              >
-                {f}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {(visibleSpecialists.length ? visibleSpecialists : specialists).map((s) => (
-              <div key={s.name} className="rounded-3xl bg-card border border-border p-7 flex flex-col shadow-sm">
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center shrink-0">
-                    <Icon name="User" size={28} className="text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-semibold leading-tight">{s.name}</h3>
-                    <p className="text-sm text-foreground/60">{s.exp}</p>
-                  </div>
-                </div>
-                <div className="space-y-2.5 text-base mb-5">
-                  <p><span className="text-foreground/55">Подход:</span> {s.approach}</p>
-                  <p><span className="text-foreground/55">С чем работает:</span> {s.works}</p>
-                </div>
-                <p className="text-base text-foreground/75 italic leading-relaxed mb-6 border-l-2 border-accent pl-4">
-                  «{s.phrase}»
-                </p>
-                <div className="mt-auto space-y-4">
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
-                    <span className="font-semibold text-primary text-lg">2000 ₽</span>
-                    <span className="text-sm text-foreground/60">60 минут</span>
-                  </div>
-                  <p className="text-sm text-foreground/70 flex items-center gap-2">
-                    <Icon name="CalendarClock" size={16} /> {s.time}
-                  </p>
-                  <Button onClick={() => scrollTo('#zayavka')} className="w-full rounded-full">
-                    Выбрать специалиста
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-foreground/55 mt-6">
-            Имена и фото будут добавлены позже. Сейчас показаны примеры карточек специалистов.
-          </p>
-
-          {/* Не знаете, кого выбрать */}
-          <div className="mt-10 rounded-3xl bg-card border border-border p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-6">
-            <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold mb-2">Не знаете, кого выбрать?</h3>
-              <p className="text-foreground/70 text-base leading-relaxed">
-                Оставьте заявку, и мы поможем подобрать специалиста под ваш запрос. Это не обязывает
-                к записи.
-              </p>
-            </div>
-            <Button size="lg" onClick={() => scrollTo('#zayavka')} className="rounded-full px-8 py-6 shrink-0">
-              Помочь с подбором
-            </Button>
+            <p>
+              На консультации можно обсудить тревогу, выгорание, сложности в отношениях, самооценку,
+              расставание, эмоциональную усталость или состояние, когда трудно понять, что именно
+              происходит. Не обязательно заранее идеально формулировать запрос. Часто первая встреча
+              помогает спокойно разобраться, с чего начать.
+            </p>
+            <p>
+              Онлайн формат удобен тем, что вы выбираете помощь не по району Самары, а по доверию,
+              формату и возможности спокойно поговорить из безопасного места. Очного приёма в Самаре
+              нет, консультации проходят только дистанционно.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Что будет после заявки */}
+      {/* 9. Почему онлайн удобно жителям Самары */}
+      <section className="container py-20 md:py-28">
+        <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Почему онлайн удобно жителям Самары</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {samaraReasons.map((r) => (
+            <div key={r.text} className="flex items-start gap-4 rounded-2xl bg-card border border-border p-6">
+              <Icon name={r.icon} size={24} className="text-primary shrink-0 mt-0.5" />
+              <span className="text-base leading-relaxed">{r.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 10. Как проходит консультация */}
+      <section id="process" className="bg-secondary/50 py-20 md:py-28">
+        <div className="container">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Как проходит консультация</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {processSteps.map((s, i) => (
+              <div key={s} className="rounded-3xl bg-card border border-border p-7">
+                <span className="font-display text-4xl font-semibold text-primary">0{i + 1}</span>
+                <p className="text-base mt-3 leading-relaxed">{s}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. Что будет после заявки */}
       <section className="container py-20 md:py-28">
         <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Что будет после заявки</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
@@ -450,7 +366,7 @@ const Index = () => {
         </p>
       </section>
 
-      {/* Почему нам можно доверять */}
+      {/* 12. Почему нам можно доверять */}
       <section className="bg-secondary/50 py-20 md:py-28">
         <div className="container">
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Почему нам можно доверять</h2>
@@ -465,31 +381,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Стоимость */}
-      <section id="stoimost" className="container py-20 md:py-28">
-        <div className="rounded-[2.5rem] bg-primary text-primary-foreground p-10 md:p-16 text-center max-w-3xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold mb-2">
-            Онлайн консультация психолога для взрослых из Самары
-          </h2>
-          <p className="text-primary-foreground/80 text-lg mb-4">60 минут</p>
-          <div className="font-display text-6xl md:text-7xl font-semibold my-4">2000 ₽</div>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-            В стоимость входит первая встреча, разбор запроса, бережная обратная связь и понимание
-            дальнейшего формата работы.
-          </p>
-          <Button
-            size="lg"
-            onClick={() => scrollTo('#zayavka')}
-            className="bg-card text-foreground hover:bg-card/90 text-base px-8 py-6 rounded-full"
-          >
-            Записаться
-          </Button>
-        </div>
-      </section>
-
-      {/* Коротко о консультации */}
-      <section className="bg-secondary/50 py-20 md:py-28">
-        <div className="container max-w-3xl">
+      {/* 13. Коротко о консультации */}
+      <section className="container py-20 md:py-28">
+        <div className="max-w-3xl">
           <h2 className="font-display text-4xl md:text-5xl font-semibold mb-8">Коротко о консультации</h2>
           <ul className="space-y-4">
             {summary.map((t) => (
@@ -499,7 +393,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <div className="flex items-start gap-3 rounded-2xl bg-background border border-border p-5 mt-6">
+          <div className="flex items-start gap-3 rounded-2xl bg-muted/50 border border-border p-5 mt-6">
             <Icon name="Info" size={20} className="text-primary shrink-0 mt-0.5" />
             <p className="text-[15px] text-foreground/75 leading-relaxed">
               Онлайн консультация психолога не является экстренной медицинской помощью. Психолог
@@ -509,32 +403,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="container py-20 md:py-28">
-        <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Частые вопросы</h2>
-        <Accordion type="single" collapsible className="max-w-3xl">
-          {faq.map((item, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border-border">
-              <AccordionTrigger className="text-left font-display text-xl font-medium hover:no-underline">
-                {item.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-foreground/70 text-base leading-relaxed">
-                {item.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      {/* 14. FAQ */}
+      <section id="faq" className="bg-secondary/50 py-20 md:py-28">
+        <div className="container">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-2xl">Частые вопросы</h2>
+          <Accordion type="single" collapsible className="max-w-3xl">
+            {faq.map((item, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border-border">
+                <AccordionTrigger className="text-left font-display text-xl font-medium hover:no-underline">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/70 text-base leading-relaxed">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </section>
 
-      {/* Форма */}
-      <section id="zayavka" className="bg-secondary/50 py-20 md:py-28">
-        <div className="container grid md:grid-cols-2 gap-12 items-start">
+      {/* 15. Форма */}
+      <section id="zayavka" className="container py-20 md:py-28">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6">
-              Записаться к психологу онлайн из Самары
+              Записаться на онлайн консультацию
             </h2>
             <p className="text-foreground/70 text-lg leading-relaxed mb-8">
-              Оставьте заявку, чтобы обсудить запрос и подобрать специалиста для первой онлайн
+              Оставьте заявку, чтобы обсудить запрос и согласовать удобное время первой онлайн
               консультации. Консультация 60 минут — 2000 рублей.
             </p>
             <div className="space-y-3">
@@ -547,7 +443,7 @@ const Index = () => {
             </div>
           </div>
           <form
-            className="rounded-3xl bg-card border border-border p-8 space-y-5"
+            className="rounded-3xl bg-card border border-border p-8 space-y-5 shadow-sm"
             onSubmit={(e) => e.preventDefault()}
           >
             <div>
@@ -577,17 +473,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Футер */}
-      <footer className="container py-12 border-t border-border">
-        <div className="flex flex-col gap-6">
-          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">Политика конфиденциальности</a>
-            <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">Согласие на обработку персональных данных</a>
-            <a href="#" className="text-foreground/60 hover:text-foreground transition-colors">Правила оплаты и отмены консультации</a>
-          </nav>
-          <p className="text-sm text-foreground/60">
-            Онлайн консультации психолога для взрослых не являются экстренной медицинской помощью.
-          </p>
+      {/* 16. Футер */}
+      <footer className="bg-footer text-footer-foreground border-t border-border">
+        <div className="container py-14">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <p className="font-display text-2xl font-semibold mb-3">Психологическая помощь онлайн для взрослых</p>
+              <ul className="space-y-1.5 text-[15px] text-footer-foreground/80">
+                <li>Консультации проходят дистанционно</li>
+                <li>Очного приёма в Самаре нет</li>
+                <li>Не является экстренной медицинской помощью</li>
+              </ul>
+            </div>
+            <nav className="flex flex-col gap-2.5 text-[15px] md:items-end">
+              <a href="#" className="text-primary hover:opacity-80 transition-opacity font-medium">Политика конфиденциальности</a>
+              <a href="#" className="text-primary hover:opacity-80 transition-opacity font-medium">Согласие на обработку персональных данных</a>
+              <a href="#" className="text-primary hover:opacity-80 transition-opacity font-medium">Правила оплаты и отмены</a>
+              <a href="#" className="text-primary hover:opacity-80 transition-opacity font-medium">Контакт для связи</a>
+            </nav>
+          </div>
         </div>
       </footer>
     </div>
